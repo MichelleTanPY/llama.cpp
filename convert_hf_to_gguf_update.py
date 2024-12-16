@@ -351,12 +351,12 @@ for model in models:
         logger.error(f"Failed to load tokenizer for model {name}. Error: {e}")
         continue  # Skip this model and continue with the next one in the loop
 
-    with open(f"models/ggml-vocab-{name}.gguf.inp", "w", encoding="utf-8") as f:
+    with open(f"models/tests/ggml-vocab-{name}.gguf.inp", "w", encoding="utf-8") as f:
         for text in tests:
             f.write(f"{text}")
             f.write("\n__ggml_vocab_test__\n")
 
-    with open(f"models/ggml-vocab-{name}.gguf.out", "w") as f:
+    with open(f"models/tests/ggml-vocab-{name}.gguf.out", "w") as f:
         for text in tests:
             res = tokenizer.encode(text, add_special_tokens=False)
             for r in res:

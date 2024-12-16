@@ -78,7 +78,7 @@ autogen-*.md
 models/*
 models-mnt
 !models/.editorconfig
-!models/ggml-vocab-*.gguf*
+!models/tests/ggml-vocab-*.gguf*
 
 # Zig
 zig-out/

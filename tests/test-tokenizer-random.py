@@ -3,7 +3,7 @@
 #
 # Sample usage:
 #
-#   python3 tests/test-tokenizer-random.py ./models/ggml-vocab-llama-bpe.gguf ./models/tokenizers/llama-bpe
+#   python3 tests/test-tokenizer-random.py ./models/tests/ggml-vocab-llama-bpe.gguf ./models/tokenizers/llama-bpe
 #
 
 from __future__ import annotations
@@ -526,7 +526,7 @@ if __name__ == "__main__":
     )
 
     path_tokenizers   = Path("./models/tokenizers/")
-    path_vocab_format = "./models/ggml-vocab-%s.gguf"
+    path_vocab_format = "./models/tests/ggml-vocab-%s.gguf"
 
     tokenizers = [
         "llama-spm",      # SPM

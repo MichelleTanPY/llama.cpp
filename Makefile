@@ -216,14 +216,14 @@ test: $(TEST_TARGETS)
 	@failures=0; \
 	for test_target in $(TEST_TARGETS); do \
 		if [ "$$test_target" = "tests/test-tokenizer-0" ]; then \
-			./$$test_target $(CURDIR)/models/ggml-vocab-llama-spm.gguf; \
-			./$$test_target $(CURDIR)/models/ggml-vocab-llama-bpe.gguf; \
-			./$$test_target $(CURDIR)/models/ggml-vocab-phi-3.gguf; \
-			./$$test_target $(CURDIR)/models/ggml-vocab-falcon.gguf; \
-			./$$test_target $(CURDIR)/models/ggml-vocab-bert-bge.gguf; \
-			./$$test_target $(CURDIR)/models/ggml-vocab-starcoder.gguf; \
-			./$$test_target $(CURDIR)/models/ggml-vocab-gpt-2.gguf; \
-			./$$test_target $(CURDIR)/models/ggml-vocab-refact.gguf; \
+			./$$test_target $(CURDIR)/models/tests/ggml-vocab-llama-spm.gguf; \
+			./$$test_target $(CURDIR)/models/tests/ggml-vocab-llama-bpe.gguf; \
+			./$$test_target $(CURDIR)/models/tests/ggml-vocab-phi-3.gguf; \
+			./$$test_target $(CURDIR)/models/tests/ggml-vocab-falcon.gguf; \
+			./$$test_target $(CURDIR)/models/tests/ggml-vocab-bert-bge.gguf; \
+			./$$test_target $(CURDIR)/models/tests/ggml-vocab-starcoder.gguf; \
+			./$$test_target $(CURDIR)/models/tests/ggml-vocab-gpt-2.gguf; \
+			./$$test_target $(CURDIR)/models/tests/ggml-vocab-refact.gguf; \
 		elif [ "$$test_target" = "tests/test-tokenizer-1-spm" ]; then \
 			continue; \
 		elif [ "$$test_target" = "tests/test-tokenizer-1-bpe" ]; then \
